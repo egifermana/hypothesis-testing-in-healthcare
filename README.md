@@ -44,19 +44,19 @@ The original dataset can be found [here](https://hbiostat.org/data/repo/safety.r
 
 ## Insights
 ### Introduction
-The pharmaceutical company GlobalXYZ has recently concluded a randomized controlled drug trial, presenting the dataset drug_safety.csv to a non-profit organization specializing in drug safety. The trial, with a 2:1 ratio of drug to placebo observations, encompasses data on adverse effects, demographic information, and various health metrics. The objective is to conduct rigorous hypothesis testing to ensure transparency and reproducibility of the drug's outcomes.
+* The pharmaceutical company GlobalXYZ has recently concluded a randomized controlled drug trial, presenting the dataset drug_safety.csv to a non-profit organization specializing in drug safety. The trial, with a 2:1 ratio of drug to placebo observations, encompasses data on adverse effects, demographic information, and various health metrics. The objective is to conduct rigorous hypothesis testing to ensure transparency and reproducibility of the drug's outcomes.
 
 ### Adverse Effects Analysis
-The dataset reveals insightful information about adverse effects (adverse_effects) and the count of adverse effects per individual (num_effects). The proportions of adverse effects in the drug and placebo groups are meticulously examined, utilizing statistical tests such as the two-sided z-test. The resulting p-value, 0.96, suggests no significant difference between the groups, reinforcing the need for further exploration.
+* The dataset reveals insightful information about adverse effects (adverse_effects) and the count of adverse effects per individual (num_effects). The proportions of adverse effects in the drug and placebo groups are meticulously examined, utilizing statistical tests such as the two-sided z-test. The resulting p-value, 0.96, suggests no significant difference between the groups, reinforcing the need for further exploration.
 
 ### Independence of Variables
-Exploring the independence between num_effects and treatment groups (trx), a chi-squared independence test is conducted. The p-value of 0.62 indicates no substantial evidence to reject independence. This underscores the importance of understanding the nuanced relationship between adverse effects and treatment efficacy.
+* Exploring the independence between num_effects and treatment groups (trx), a chi-squared independence test is conducted. The p-value of 0.62 indicates no substantial evidence to reject independence. This underscores the importance of understanding the nuanced relationship between adverse effects and treatment efficacy.
 
 ### Age Distribution Analysis
-The age distribution between the drug and placebo groups is visualized through a histogram. However, a normality test reveals non-normal distributions, prompting the use of a non-parametric Mann-Whitney U test. The resulting p-value of 0.26 suggests no significant difference in age between the two groups, providing valuable context for the overall analysis.
+* The age distribution between the drug and placebo groups is visualized through a histogram. However, a normality test reveals non-normal distributions, prompting the use of a non-parametric Mann-Whitney U test. The resulting p-value of 0.26 suggests no significant difference in age between the two groups, providing valuable context for the overall analysis.
 
 ### Conclusion
-The comprehensive analysis of adverse effects, independence of variables, and age distribution contributes to a thorough understanding of the drug trial dataset. While the drug and placebo groups exhibit similarities in adverse effects and age distribution, further investigations are warranted to delve deeper into potential contributing factors. The methodology employed in this analysis establishes a robust foundation for ongoing research and critical evaluation in the realm of drug safety.
+* The comprehensive analysis of adverse effects, independence of variables, and age distribution contributes to a thorough understanding of the drug trial dataset. While the drug and placebo groups exhibit similarities in adverse effects and age distribution, further investigations are warranted to delve deeper into potential contributing factors. The methodology employed in this analysis establishes a robust foundation for ongoing research and critical evaluation in the realm of drug safety.
 
 
 ## Import libraries
