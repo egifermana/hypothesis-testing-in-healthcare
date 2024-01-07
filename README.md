@@ -23,6 +23,7 @@ The original dataset can be found [here](https://hbiostat.org/data/repo/safety.r
 
 ## Table of Contents
 - [Insights](#insights)
+- [Data Analysis](#data-analysis)
 - [Import libraries](#import-libraries)
 - [Load the Dataset](#load-the-dataset)
 - [Count the adverse effect column values for each trx group](#count-the-adverse_effect-column-values-for-each-trx-group)
@@ -56,7 +57,7 @@ The age distribution between the drug and placebo groups is visualized through a
 ### Conclusion
 The comprehensive analysis of adverse effects, independence of variables, and age distribution contributes to a thorough understanding of the drug trial dataset. While the drug and placebo groups exhibit similarities in adverse effects and age distribution, further investigations are warranted to delve deeper into potential contributing factors. The methodology employed in this analysis establishes a robust foundation for ongoing research and critical evaluation in the realm of drug safety.
 
-
+# Data Analysis
 ## Import libraries
 ```python
 import numpy as np
