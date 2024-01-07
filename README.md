@@ -24,22 +24,40 @@ The original dataset can be found [here](https://hbiostat.org/data/repo/safety.r
 
 ## Table of Contents
 - [Overview](#overview)
-- [Import Libraries](#import-libraries)
+- [Insights](#insights)
+- [Import libraries](#import-libraries)
 - [Load the Dataset](#load-the-dataset)
-- [Count the Adverse Effect Column Values for Each trx Group](#count-the-adverse_effect-column-values-for-each-trx-group)
+- [Count the adverse effect column values for each trx group](#count-the-adverse_effect-column-values-for-each-trx-group)
 - [Compute Total Rows in Each Group](#compute-total-rows-in-each-group)
 - [Create an Array of the "Yes" Counts for Each Group](#create-an-array-of-the-yes-counts-for-each-group)
 - [Create an Array of the Total Number of Rows in Each Group](#create-an-array-of-the-total-number-of-rows-in-each-group)
 - [Perform a Two-sided Z-test on the Two Proportions](#perform-a-two-sided-z-test-on-the-two-proportions)
-- [Store the P-value](#store-the-p-value)
+- [Store the p-value](#store-the-p-value)
 - [Determine if num_effects and trx are Independent](#determine-if-num_effects-and-trx-are-independent)
-- [Extract the P-value](#extract-the-p-value)
+- [Extract the p-value](#extract-the-p-value)
 - [Create a Histogram with Seaborn](#create-a-histogram-with-seaborn)
-- [Confirm the Histogram's Output by Conducting a Normality Test](#confirm-the-histograms-output-by-conducting-a-normality-test)
+- [Confirm the Histogram Output by Conducting a Normality Test](#confirm-the-histogram-output-by-conducting-a-normality-test,-to-choose-between-unpaired-t-test-and-wilcoxon-mann-whitney-test)
 - [Select the Age of the Drug Group](#select-the-age-of-the-drug-group)
 - [Select the Age of the Placebo Group](#select-the-age-of-the-placebo-group)
 - [Since the Data Distribution is Not Normal, Conduct a Two-sided Mann-Whitney U Test](#since-the-data-distribution-is-not-normal-conduct-a-two-sided-mann-whitney-u-test)
-- [Extract the P-value](#extract-the-p-value)
+- [Extract the p-value](#extract-the-p-value)
+
+## Insights
+### Introduction
+The pharmaceutical company GlobalXYZ has recently concluded a randomized controlled drug trial, presenting the dataset drug_safety.csv to a non-profit organization specializing in drug safety. The trial, with a 2:1 ratio of drug to placebo observations, encompasses data on adverse effects, demographic information, and various health metrics. The objective is to conduct rigorous hypothesis testing to ensure transparency and reproducibility of the drug's outcomes.
+
+### Adverse Effects Analysis
+The dataset reveals insightful information about adverse effects (adverse_effects) and the count of adverse effects per individual (num_effects). The proportions of adverse effects in the drug and placebo groups are meticulously examined, utilizing statistical tests such as the two-sided z-test. The resulting p-value, 0.96, suggests no significant difference between the groups, reinforcing the need for further exploration.
+
+### Independence of Variables
+Exploring the independence between num_effects and treatment groups (trx), a chi-squared independence test is conducted. The p-value of 0.62 indicates no substantial evidence to reject independence. This underscores the importance of understanding the nuanced relationship between adverse effects and treatment efficacy.
+
+### Age Distribution Analysis
+The age distribution between the drug and placebo groups is visualized through a histogram. However, a normality test reveals non-normal distributions, prompting the use of a non-parametric Mann-Whitney U test. The resulting p-value of 0.26 suggests no significant difference in age between the two groups, providing valuable context for the overall analysis.
+
+### Conclusion
+The comprehensive analysis of adverse effects, independence of variables, and age distribution contributes to a thorough understanding of the drug trial dataset. While the drug and placebo groups exhibit similarities in adverse effects and age distribution, further investigations are warranted to delve deeper into potential contributing factors. The methodology employed in this analysis establishes a robust foundation for ongoing research and critical evaluation in the realm of drug safety.
+
 
 ## Import libraries
 ```python
@@ -180,7 +198,7 @@ Output
 
 ![](histogram.png)
 
-## Confirm the histogram's output by conducting a normality test, to choose between unpaired t-test and Wilcoxon-Mann-Whitney test
+## Confirm the histogram output by conducting a normality test, to choose between unpaired t-test and Wilcoxon-Mann-Whitney test
 ```python
 normality = pingouin.normality(
     data = drug_safety,
