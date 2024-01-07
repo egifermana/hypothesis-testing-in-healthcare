@@ -1,5 +1,6 @@
 # Hypothesis Testing in Healthcare: Drug Safety
 
+## Overview
 A pharmaceutical company GlobalXYZ has just completed a randomized controlled drug trial. To promote transparency and reproducibility of the drug's outcome, they (GlobalXYZ) have presented the dataset to your organization, a non-profit that focuses primarily on drug safety.
 
 The dataset `drug_safety.csv` was obtained from [Hbiostat](https://hbiostat.org/data/) courtesy of the Vanderbilt University Department of Biostatistics. It contained five adverse effects: headache, abdominal pain, dyspepsia, upper respiratory infection, chronic obstructive airway disease (COAD), demographic data, vital signs, lab measures, etc. The ratio of drug observations to placebo observations is 2 to 1.
@@ -20,6 +21,25 @@ The columns in the modified dataset are:
 |`num_effects` | The number of adverse effects experienced by a single individual |
 
 The original dataset can be found [here](https://hbiostat.org/data/repo/safety.rda).
+
+## Table of Contents
+- [Overview](#overview)
+- [Import Libraries](#import-libraries)
+- [Load the Dataset](#load-the-dataset)
+- [Count the Adverse Effect Column Values for Each trx Group](#count-the-adverse_effect-column-values-for-each-trx-group)
+- [Compute Total Rows in Each Group](#compute-total-rows-in-each-group)
+- [Create an Array of the "Yes" Counts for Each Group](#create-an-array-of-the-yes-counts-for-each-group)
+- [Create an Array of the Total Number of Rows in Each Group](#create-an-array-of-the-total-number-of-rows-in-each-group)
+- [Perform a Two-sided Z-test on the Two Proportions](#perform-a-two-sided-z-test-on-the-two-proportions)
+- [Store the P-value](#store-the-p-value)
+- [Determine if num_effects and trx are Independent](#determine-if-num_effects-and-trx-are-independent)
+- [Extract the P-value](#extract-the-p-value)
+- [Create a Histogram with Seaborn](#create-a-histogram-with-seaborn)
+- [Confirm the Histogram's Output by Conducting a Normality Test](#confirm-the-histograms-output-by-conducting-a-normality-test)
+- [Select the Age of the Drug Group](#select-the-age-of-the-drug-group)
+- [Select the Age of the Placebo Group](#select-the-age-of-the-placebo-group)
+- [Since the Data Distribution is Not Normal, Conduct a Two-sided Mann-Whitney U Test](#since-the-data-distribution-is-not-normal-conduct-a-two-sided-mann-whitney-u-test)
+- [Extract the P-value](#extract-the-p-value)
 
 ## Import libraries
 ```python
