@@ -43,7 +43,7 @@ The original dataset can be found [here](https://hbiostat.org/data/repo/safety.r
 
 ## Insights
 ### Introduction
-The pharmaceutical company GlobalXYZ has recently concluded a randomized controlled drug trial, presenting the dataset drug_safety.csv to a non-profit organization specializing in drug safety. The trial, with a 2:1 ratio of drug to placebo observations, encompasses data on adverse effects, demographic information, and various health metrics. The objective is to conduct rigorous hypothesis testing to ensure transparency and reproducibility of the drug's outcomes.
+The pharmaceutical company GlobalXYZ has recently concluded a randomized controlled drug trial, presenting the dataset `drug_safety.csv` to a non-profit organization specializing in drug safety. The trial, with a 2:1 ratio of drug to placebo observations, encompasses data on adverse effects, demographic information, and various health metrics. The objective is to conduct rigorous hypothesis testing to ensure transparency and reproducibility of the drug's outcomes.
 
 ### Adverse Effects Analysis
 The dataset reveals insightful information about adverse effects (`adverse_effects`) and the count of adverse effects per individual (`num_effects`). The proportions of adverse effects in the drug and placebo groups are meticulously examined, utilizing statistical tests such as the two-sided z-test. The resulting p-value, 0.96, suggests no significant difference between the groups, reinforcing the need for further exploration.
