@@ -21,26 +21,6 @@ The columns in the modified dataset are:
 
 The original dataset can be found [here](https://hbiostat.org/data/repo/safety.rda).
 
-## Table of Contents
-- [Insights](#insights)
-- [Data Analysis](#data-analysis)
-- [Import libraries](#import-libraries)
-- [Load the Dataset](#load-the-dataset)
-- [Count the adverse effect column values for each trx group](#count-the-adverse_effect-column-values-for-each-trx-group)
-- [Compute Total Rows in Each Group](#compute-total-rows-in-each-group)
-- [Create an Array of the "Yes" Counts for Each Group](#create-an-array-of-the-yes-counts-for-each-group)
-- [Create an Array of the Total Number of Rows in Each Group](#create-an-array-of-the-total-number-of-rows-in-each-group)
-- [Perform a Two-sided Z-test on the Two Proportions](#perform-a-two-sided-z-test-on-the-two-proportions)
-- [Store the p-value](#store-the-p-value)
-- [Determine if num_effects and trx are Independent](#determine-if-num_effects-and-trx-are-independent)
-- [Extract the p-value](#extract-the-p-value)
-- [Create a Histogram with Seaborn](#create-a-histogram-with-seaborn)
-- [Confirm the Histogram Output by Conducting a Normality Test](#confirm-the-histogram-output-by-conducting-a-normality-test,-to-choose-between-unpaired-t-test-and-wilcoxon-mann-whitney-test)
-- [Select the Age of the Drug Group](#select-the-age-of-the-drug-group)
-- [Select the Age of the Placebo Group](#select-the-age-of-the-placebo-group)
-- [Since the Data Distribution is Not Normal, Conduct a Two-sided Mann-Whitney U Test](#since-the-data-distribution-is-not-normal-conduct-a-two-sided-mann-whitney-u-test)
-- [Extract the p-value](#extract-the-p-value)
-
 ## Insights
 ### Introduction
 The pharmaceutical company GlobalXYZ has recently concluded a randomized controlled drug trial, presenting the dataset `drug_safety.csv` to a non-profit organization specializing in drug safety. The trial, with a 2:1 ratio of drug to placebo observations, encompasses data on adverse effects, demographic information, and various health metrics. The objective is to conduct rigorous hypothesis testing to ensure transparency and reproducibility of the drug's outcomes.
